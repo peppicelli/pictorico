@@ -52,6 +52,9 @@
 		</div>
 	<?php endif; ?>
 	<div class="overlay overlay-hugeinc">
-		<button type="button" class="overlay-close">Close</button>
+		<h1 id="video-title">Title</h1>
+		<span class="fa fa-times fa-2x overlay-close"></span>
+		<div class="video-container">
+		</div>
 	</div>
 	<div id="content" class="site-content">

@@ -185,7 +185,7 @@ function pictorico_get_video_url() {
 	$lytes_regexp="/(?:<p>)?http(v|a):\/\/([a-zA-Z0-9\-\_]+\.|)(youtube|youtu)(\.com|\.be)\/(((watch(\?v\=|\/v\/)|.+?v\=|)([a-zA-Z0-9\-\_]{11}))|(playlist\?list\=([a-zA-Z0-9\-\_]*)))([^\s<]*)(<?:\/p>)?/";
 
 	if ( preg_match($lytes_regexp, $content, $matches ) ) {
-		return str_replace("httpv://","http://",( $matches[0] ));
+		return "https://www.youtube.com/embed/".$matches[9];
 	}
 
 	return false;
