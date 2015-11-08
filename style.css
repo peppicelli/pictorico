@@ -1174,6 +1174,13 @@ a:hover, a:focus, a:active {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.site-title img {
+  margin-top: -1px;
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 885px) {
   .site-title {
     margin-left: 15px;
