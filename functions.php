@@ -127,10 +127,14 @@ function pictorico_scripts() {
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.css', array(), '4.4.0' );
 	wp_enqueue_style( 'ostrich-sans', get_template_directory_uri() . '/ostrich-sans/ostrich-sans.css', array(), '1.0' );
+	wp_enqueue_style( 'overlay', get_template_directory_uri() . '/overlay.css', array() );
 	wp_enqueue_style( 'pictorico-open-sans-condensed' );
 	wp_enqueue_style( 'pictorico-pt-serif' );
 
 	wp_enqueue_script( 'pictorico-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_register_script( 'pictorico-video', get_template_directory_uri() . '/js/video.js', array( 'jquery' ) );
+	wp_enqueue_script( 'pictorico-video');
 
 	wp_enqueue_script( 'pictorico-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

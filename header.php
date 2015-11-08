@@ -36,7 +36,7 @@
             	<a id="twitter" target="_blank" href="<?php echo get_theme_mod('twitter_url', 'https://twitter.com'); ?>"><i class="fa fa-twitter fa-1x"></i></a>
             	<a id="instagram" target="_blank" href="<?php echo get_theme_mod('instagram_url', 'https://instagram.com'); ?>"><i class="fa fa-instagram fa-1x"></i></a>
             	<a id="youtube" target="_blank" href="<?php echo get_theme_mod('youtube_url', 'https://youtube.com'); ?>"><i class="fa fa-youtube fa-1x"></i></a>
-            	<a href="twitter.com"><i class="fa fa-envelope-o fa-1x"></i></a>
+            	<a href="mailto:<?php echo get_bloginfo ( 'admin_email' ); ?>"><i class="fa fa-envelope-o fa-1x"></i></a>
             </div>
 		</div>
 	</header><!-- #masthead -->
@@ -51,4 +51,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
+	<div class="overlay overlay-hugeinc">
+		<button type="button" class="overlay-close">Close</button>
+	</div>
 	<div id="content" class="site-content">

@@ -25,7 +25,7 @@ if ( ! has_post_thumbnail() )
 			<?php pictorico_date(); ?>
 		</div><!-- .entry-meta -->
 		<?php if ( $format && $format == "video" ): ?>
-			<a class="entry-format" href="<?php echo esc_url(pictorico_get_video_url()); ?>" title="View"><span class="screen-reader-text"><?php echo get_post_format_string( $format ); ?></span></a>
+			<a class="entry-format video-overlay-show" href="<?php echo esc_url(pictorico_get_video_url()); ?>" title="View"><span class="screen-reader-text"><?php echo get_post_format_string( $format ); ?></span></a>
 		<?php endif; ?>
 		<?php endif; ?>
 		

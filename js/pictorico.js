@@ -10,6 +10,4 @@ jQuery(document).ready( function($) {
 			itemMargin: 0,
 		} );
 
-
-
 });
