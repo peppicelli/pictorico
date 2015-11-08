@@ -38,6 +38,17 @@
             	<a id="youtube" target="_blank" href="<?php echo get_theme_mod('youtube_url', 'https://youtube.com'); ?>"><i class="fa fa-youtube fa-1x"></i></a>
             	<a href="mailto:<?php echo get_bloginfo ( 'admin_email' ); ?>"><i class="fa fa-envelope-o fa-1x"></i></a>
             </div>
+            <div class="languages">
+            <?php
+            global $polylang;
+            foreach ($polylang->get_languages_list() as $language) {
+                $url = esc_url($polylang->get_translation_url($language));
+                $language = esc_js($language->slug);
+                $active = (pll_current_language('slug') == $language) ? 'class="active"' : '';
+                echo '<a href="'.$url.'" '.$active.'>'.$language.'</a>';
+            }
+            ?>
+            </div>
 		</div>
 	</header><!-- #masthead -->
 	<?php if ( is_home() && pictorico_has_featured_posts( 1 ) ) : ?>
