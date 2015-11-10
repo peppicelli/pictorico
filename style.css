@@ -542,12 +542,18 @@ body {
   line-height: 30px;
 }
 
-button,
+button, input[type="submit"] {
+  background: white;
+  font-size: 20px;
+  font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
+}
+
 input,
 select,
 textarea {
   background: white;
-  font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-family: inherit;
 }
 
 /* Alignment */
@@ -851,12 +857,12 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  border: 1px solid #e7f2f8;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 0;
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: inherit;
+  font-size: 100%;
   max-width: 100%;
   padding: 14px;
 }
@@ -1447,6 +1453,7 @@ a:hover, a:focus, a:active {
 .entry-content {
   margin: 0 auto;
   width: 885px;
+  font-size:85%;
 }
 @media screen and (max-width: 1180px) {
   .entry-content {
@@ -1476,8 +1483,8 @@ a:hover, a:focus, a:active {
   border-bottom: 52.5px solid #323232;
   border-top: 52.5px solid #323232;
   color: white;
-  margin: 0 0 30px;
-  padding: 15px 0;
+  margin: 0 0 20px;
+  padding: 10px 0;
   position: relative;
   z-index: 1;
 }
@@ -1531,7 +1538,7 @@ a:hover, a:focus, a:active {
   line-height: 2em;
   color: #999999;
   font-style: italic;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   width: 885px;
   text-align: center;
 }
@@ -1552,7 +1559,7 @@ a:hover, a:focus, a:active {
   background: #cccccc;
   content: "";
   display: block;
-  margin: 15px auto;
+  margin: 10px auto;
   width: 120px;
   height: 1px;
 }
@@ -2165,6 +2172,7 @@ object {
 .comments-area {
   margin: 0 auto;
   max-width: 885px;
+  font-size: 85%;
 }
 @media screen and (max-width: 1180px) {
   .comments-area {
@@ -2184,7 +2192,7 @@ object {
 .comment-reply-title {
   font-size: 1.85em;
   line-height: 1.62162em;
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
   text-align: center;
@@ -2286,7 +2294,7 @@ object {
 .comment-form-email label,
 .comment-form-url label,
 .comment-form-comment label {
-  padding: 7.5px 15px;
+  padding: 3px 15px;
   position: absolute;
   left: 0;
   top: 7.5px;
