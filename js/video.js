@@ -11,10 +11,7 @@
             player.playVideo();
         }
 
-        $(".video-overlay-show").click(function( event ) {
-            event.preventDefault();
-            var youTubeURL = $(this).attr('href');
-            var title = $(this).attr('title');
+        window.displayVideo = function(youTubeURL, title) {
             $("#video-title").html(title);
             $(".video-container").html('<iframe width="560" id="video-player" height="315" src="' + youTubeURL + '?enablejsapi=1&showinfo=0" frameborder="0" autoplay="1"></iframe>');
 
@@ -34,7 +31,7 @@
             }
 
             $(".overlay").removeClass('overlay-hugeinc').addClass('overlay-hugeinc-open overlay-hugeinc');
-        });
+        };
 
         $(".overlay-close").click(function( event ) {
             $(".overlay").removeClass('overlay-hugeinc-open');

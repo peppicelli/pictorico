@@ -196,8 +196,10 @@ function pictorico_get_flyto() {
 	    array_key_exists('latitude', get_post_custom())) {
 		return "onmouseenter=\"flyTo(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].")\"";
 	}
-	else {
-		return "";
-	}
+}
 
+function pictorico_get_videoclick() {
+	if (get_post_format() == "video") {
+		return "onclick=\"displayVideo('".esc_url(pictorico_get_video_url())."','".the_title_attribute(array( 'echo' => false ))."')\"";
+	}
 }

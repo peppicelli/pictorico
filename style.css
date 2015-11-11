@@ -76,6 +76,10 @@ section {
   display: block;
 }
 
+article {
+  cursor: pointer;
+}
+
 ol, ul {
   list-style: none;
 }

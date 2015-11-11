@@ -11,13 +11,17 @@ if ( ! has_post_thumbnail() )
 	$postclass = 'no-thumbnail';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>  <?php echo pictorico_get_flyto(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>  <?php echo pictorico_get_videoclick(); ?> <?php echo pictorico_get_flyto(); ?>>
 	<div class="entry-thumbnail">
-		<a href="<?php the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">
+		<?php if ('video' != $format) : ?>
+		<a href="<?php the_permalink(); ?>">
+		<?php endif; ?>
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'pictorico-home' ); ?>
 			<?php endif; ?>
+		<?php if ('video' != $format) : ?>
 		</a>
+		<?php endif; ?>
 	</div>
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -25,16 +29,18 @@ if ( ! has_post_thumbnail() )
 			<?php pictorico_date(); ?>
 		</div><!-- .entry-meta -->
 		<?php if ( $format && $format == "video" ): ?>
-			<a class="entry-format video-overlay-show" href="<?php echo esc_url(pictorico_get_video_url()); ?>" title="<?php echo the_title_attribute(); ?>"><span class="screen-reader-text"><?php echo get_post_format_string( $format ); ?></span></a>
+			<a class="entry-format" title="<?php echo the_title_attribute(); ?>"><span class="screen-reader-text"><?php echo get_post_format_string( $format ); ?></span></a>
 		<?php endif; ?>
 		<?php endif; ?>
 		
 		<?php 	// Remove the widont filter because of the limited space for entry titles.
-				$restore_widont = remove_filter( 'the_title', 'widont' ); 
+			$restore_widont = remove_filter( 'the_title', 'widont' );
 		?>
 				
 		<?php if ( 'link' == $format ) : ?>
 			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( pictorico_get_link_url() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+		<?php elseif ('video' == $format) : ?>
+        	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php else : ?>
 			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
 		<?php endif; ?>
