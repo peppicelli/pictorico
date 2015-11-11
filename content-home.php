@@ -11,7 +11,7 @@ if ( ! has_post_thumbnail() )
 	$postclass = 'no-thumbnail';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>  <?php echo pictorico_get_flyto(); ?>>
 	<div class="entry-thumbnail">
 		<a href="<?php the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>

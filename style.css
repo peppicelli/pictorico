@@ -1124,7 +1124,7 @@ a:hover, a:focus, a:active {
   border-right: 1px solid #cccccc;
   float: left;
   max-width: 25%;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 @media screen and (max-width: 885px) {
   .site-branding {
@@ -1488,6 +1488,22 @@ a:hover, a:focus, a:active {
   position: relative;
   z-index: 1;
 }
+
+.entry-map {
+  float:right;
+  position: absolute; !important;
+  right: 0px;
+  top: 0px;
+  width: 350px;
+  height: 350px;
+  z-index:1000;
+  background-color:#E7F2F8;
+}
+
+.mapboxgl-map {
+  position: absolute; !important;
+}
+
 @media screen and (max-width: 885px) {
   .entry-header {
     border-top-width: 30px;

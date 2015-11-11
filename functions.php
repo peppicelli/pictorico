@@ -122,8 +122,8 @@ add_action( 'widgets_init', 'pictorico_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pictorico_scripts() {
+	wp_enqueue_style( 'mapbox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.3/mapbox-gl.css' );
 	wp_enqueue_style( 'pictorico-style', get_stylesheet_uri() );
-
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.css', array(), '4.4.0' );
 	wp_enqueue_style( 'ostrich-sans', get_template_directory_uri() . '/ostrich-sans/ostrich-sans.css', array(), '1.0' );
@@ -131,8 +131,10 @@ function pictorico_scripts() {
 	wp_enqueue_style( 'pictorico-open-sans-condensed' );
 	wp_enqueue_style( 'pictorico-pt-serif' );
 
+	wp_enqueue_script( 'mapbox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.3/mapbox-gl.js');
 	wp_enqueue_script( 'pictorico-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'pictorico-video', get_template_directory_uri() . '/js/video.js', array( 'jquery' ) );
+	wp_enqueue_script( 'pictorico-mapbox', get_template_directory_uri() . '/js/pictorio-mapbox.js', array( 'jquery' ) );
 	wp_enqueue_script( 'pictorico-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

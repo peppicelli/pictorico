@@ -190,3 +190,14 @@ function pictorico_get_video_url() {
 
 	return false;
 }
+
+function pictorico_get_flyto() {
+	if (array_key_exists('longitude', get_post_custom()) &&
+	    array_key_exists('latitude', get_post_custom())) {
+		return "onmouseenter=\"flyTo(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].")\"";
+	}
+	else {
+		return "";
+	}
+
+}

@@ -6,7 +6,7 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background: rgba(21,96,122,0.9);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* Overlay closing cross */

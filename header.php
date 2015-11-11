@@ -60,6 +60,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 				</div>
 			</div>
+			<div class="entry-map" id="map"></div>
 		</div>
 	<?php endif; ?>
 	<div class="overlay overlay-hugeinc">
