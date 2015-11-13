@@ -1504,6 +1504,12 @@ a:hover, a:focus, a:active {
   background-color:#E7F2F8;
 }
 
+@media screen and (max-width: 885px) {
+  .entry-map {
+    display: none;
+  }
+}
+
 .mapboxgl-map {
   position: absolute; !important;
 }
