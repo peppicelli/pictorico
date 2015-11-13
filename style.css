@@ -1225,6 +1225,12 @@ a:hover, a:focus, a:active {
   line-height: 30px;
 }
 
+@media screen and (max-width: 885px) {
+  .social-media {
+    margin-right: 60px;
+  }
+}
+
 .social-media a > i {
   padding-left: 5px;
   padding-right: 5px;

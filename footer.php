@@ -17,7 +17,9 @@
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'pictorico' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'pictorico' ), 'WordPress' ); ?></a>
 			<span class="sep"> &bull; </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'pictorico' ), 'Pictorico', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
-		</div><!-- .site-info -->
+			<span class="sep"> &bull; </span>
+        	Customization available on <a href="https://github.com/peppicelli/pictorico">github</a>
+        </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -191,10 +191,17 @@ function pictorico_get_video_url() {
 	return false;
 }
 
-function pictorico_get_flyto() {
+function pictorico_get_map_actions() {
 	if (array_key_exists('longitude', get_post_custom()) &&
 	    array_key_exists('latitude', get_post_custom())) {
-		return "onmouseenter=\"flyTo(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].")\"";
+		return "onmouseenter=\"activateMarker(".get_the_ID().");flyTo(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].")\" onmouseleave=\"deactivateMarker(".get_the_ID().")\"";
+	}
+}
+
+function pictorico_get_marker_add() {
+	if (array_key_exists('longitude', get_post_custom()) &&
+	    array_key_exists('latitude', get_post_custom())) {
+		return "<script type=\"text/javascript\">waitAndAddMarker(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].",".get_the_ID().",'".get_post_format()."')</script>";
 	}
 }
 

@@ -10,8 +10,8 @@ $postclass = '';
 if ( ! has_post_thumbnail() )
 	$postclass = 'no-thumbnail';
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>  <?php echo pictorico_get_videoclick(); ?> <?php echo pictorico_get_flyto(); ?>>
+ <?php echo pictorico_get_marker_add(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>  <?php echo pictorico_get_videoclick(); ?> <?php echo pictorico_get_map_actions(); ?>>
 	<div class="entry-thumbnail">
 		<?php if ('video' != $format) : ?>
 		<a href="<?php the_permalink(); ?>">
