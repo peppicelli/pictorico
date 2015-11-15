@@ -33,10 +33,10 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
 			<div class="social-media">
-            	<a id="twitter" target="_blank" href="<?php echo get_theme_mod('twitter_url', 'https://twitter.com'); ?>"><i class="fa fa-twitter fa-1x"></i></a>
-            	<a id="instagram" target="_blank" href="<?php echo get_theme_mod('instagram_url', 'https://instagram.com'); ?>"><i class="fa fa-instagram fa-1x"></i></a>
-            	<a id="youtube" target="_blank" href="<?php echo get_theme_mod('youtube_url', 'https://youtube.com'); ?>"><i class="fa fa-youtube fa-1x"></i></a>
-            	<a href="mailto:<?php echo get_bloginfo ( 'admin_email' ); ?>"><i class="fa fa-envelope-o fa-1x"></i></a>
+                <a id="twitter" target="_blank" href="<?php echo get_theme_mod('twitter_url', 'https://twitter.com'); ?>"><i class="fa fa-twitter fa-1x"></i></a>
+                <a id="flickr" target="_blank" href="<?php echo get_theme_mod('flickr_url', 'https://flickr.com'); ?>"><i class="fa fa-flickr fa-1x"></i></a>
+                <a id="youtube" target="_blank" href="<?php echo get_theme_mod('youtube_url', 'https://youtube.com'); ?>"><i class="fa fa-youtube fa-1x"></i></a>
+                <a href="mailto:<?php echo get_bloginfo ( 'admin_email' ); ?>"><i class="fa fa-envelope-o fa-1x"></i></a>
             </div>
             <div class="languages">
             <?php
@@ -64,9 +64,9 @@
 		</div>
 	<?php endif; ?>
 	<div class="overlay overlay-hugeinc">
-		<h1 id="video-title">Title</h1>
+		<h1 id="overlay-title">Title</h1>
 		<span class="fa fa-times fa-2x overlay-close"></span>
-		<div class="video-container">
+		<div class="overlay-container">
 		</div>
 	</div>
 	<div id="content" class="site-content">

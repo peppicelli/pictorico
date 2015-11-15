@@ -14,13 +14,13 @@ function pictorico_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->add_setting( 'instagram_url' , array(
+	$wp_customize->add_setting( 'flickr_url' , array(
         'default' => ''
     ) );
-	$wp_customize->add_control( 'instagram_url', array(
-		'label'    => __( 'Instagram URL', 'pictorico' ),
+	$wp_customize->add_control( 'flickr_url', array(
+		'label'    => __( 'Flickr URL', 'pictorico' ),
 		'section'  => 'title_tagline',
-        'settings' => 'instagram_url',
+        'settings' => 'flickr_url',
 		'type'     => 'text',
 		'priority' => 100,
 	) );
@@ -46,6 +46,7 @@ function pictorico_customize_register( $wp_customize ) {
 		'type'     => 'text',
 		'priority' => 100,
 	) );
+
 }
 add_action( 'customize_register', 'pictorico_customize_register' );
 

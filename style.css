@@ -527,7 +527,7 @@ html {
 .social-links ul a:before,
 .flex-direction-nav a:before {
   -webkit-font-smoothing: antialiased;
-  font-family: "Genericons";
+  font-family: "FontAwesome";
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -1369,7 +1369,7 @@ a:hover, a:focus, a:active {
 }
 .menu-toggle:before {
   background-color: #0570a8;
-  content: "\f419";
+  content: "\f0c9";
   display: inline-block;
   float: right;
   font-size: 24px;
@@ -1858,6 +1858,11 @@ a:hover, a:focus, a:active {
 .search .site-content .format-image .entry-format:before {
   content: "\f102";
 }
+.blog .site-content .format-standard .entry-format:before,
+.archive .site-content .format-standard .entry-format:before,
+.search .site-content .format-standard .entry-format:before {
+  content: "\f040";
+}
 .blog .site-content .format-aside .entry-format:before,
 .archive .site-content .format-aside .entry-format:before,
 .search .site-content .format-aside .entry-format:before {
@@ -1879,7 +1884,7 @@ a:hover, a:focus, a:active {
 .blog .site-content .format-video .entry-format:before,
 .archive .site-content .format-video .entry-format:before,
 .search .site-content .format-video .entry-format:before {
-  content: "\f104";
+  content: "\f03d";
 }
 .blog .site-content .format-audio .entry-format:before,
 .archive .site-content .format-audio .entry-format:before,
@@ -1899,7 +1904,7 @@ a:hover, a:focus, a:active {
 .blog .site-content .format-gallery .entry-format:before,
 .archive .site-content .format-gallery .entry-format:before,
 .search .site-content .format-gallery .entry-format:before {
-  content: "\f103";
+  content: "\f083";
 }
 .blog .site-content .hentry.sticky .entry-format:before,
 .archive .site-content .hentry.sticky .entry-format:before,

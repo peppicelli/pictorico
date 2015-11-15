@@ -21,9 +21,9 @@
 			$( '#twitter' ).attr("href", to);
 		} );
 	} );
-	wp.customize( 'instagram_url', function( value ) {
+	wp.customize( 'flickr_url', function( value ) {
 		value.bind( function( to ) {
-			$( '#instagram' ).attr("href", to);
+			$( '#flickr' ).attr("href", to);
 		} );
 	} );
 	wp.customize( 'youtube_url', function( value ) {

@@ -210,3 +210,9 @@ function pictorico_get_videoclick() {
 		return "onclick=\"displayVideo('".esc_url(pictorico_get_video_url())."','".the_title_attribute(array( 'echo' => false ))."')\"";
 	}
 }
+
+function pictorico_get_flickrclick() {
+	if (array_key_exists('flickr gallery id', get_post_custom())) {
+		return "onclick=\"displayFlickrGallery('".get_post_custom()['flickr gallery id'][0]."','".the_title_attribute(array( 'echo' => false ))."')\"";
+	}
+}

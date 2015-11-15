@@ -17,7 +17,8 @@ function waitAndAddMarker(lon, lat, id, postType){
         var markersIcons = {};
         var postTypeToIcon = {
             '': 'fa-pencil',
-            'video': 'fa-video-camera'
+            'video': 'fa-video-camera',
+            'gallery': 'fa-camera-retro'
         };
 
         window.flyTo = function(lon, lat) {

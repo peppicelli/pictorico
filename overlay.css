@@ -6,7 +6,7 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
 }
 
 /* Overlay closing cross */
@@ -52,19 +52,38 @@
     transition: opacity 0.5s;
 }
 
-.video-container {
+.overlay-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 80px; height: 0; overflow: hidden;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.overlay-container iframe,
+.overlay-container object,
+.overlay-container embed {
     position: absolute;
     top: 19%;
     left: 15%;
-    width: 70%;
-    height:63%;
+    width: 70% !important;
+    height:66.666% !important;
     border: 3px solid #EEE;
+}
+
+@media screen and (max-width: 1180px) {
+    .overlay-container-flickr {
+        top: 19%;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .overlay-container-flickr {
+        top: 100px;
+    }
+}
+
+.overlay-container-flickr {
+    position: absolute;
+    left: 15%;
+    width: 100%;
+    height: 120%;
 }
