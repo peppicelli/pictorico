@@ -56,7 +56,7 @@
 	<?php elseif ( get_header_image() && ( is_home() || is_archive() || is_search() ) ) : ?>
 		<div class="hentry has-thumbnail">
 			<div class="entry-header">
-				<div class="header-image" style="background-image: url(<?php header_image(); ?>)">
+				<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php header_image(); ?>)">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 				</div>
 			</div>

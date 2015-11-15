@@ -11,20 +11,16 @@ function waitAndAddMarker(lon, lat, id, postType){
 
 (function($) {
     $(document).ready( function($) {
-        L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVscGVwcGljZWxsaSIsImEiOiJjaWdncnpqOG4wc3IzdzNrbmQzbW40NnRqIn0.608HZWsnmln_Mr6t8JhkEA';
-        var map = L.mapbox.map('map', 'danielpeppicelli.gd5pjb3b', {zoomControl:false});
-        var markers = {};
-        var markersIcons = {};
-        var postTypeToIcon = {
-            '': 'fa-pencil',
-            'video': 'fa-video-camera',
-            'gallery': 'fa-camera-retro'
+
+        window.flyTo = function(lon, lat, zoom) {
+            zoom = zoom || 6;
+            if (map !== undefined) {
+                map.setView([lat,lon], zoom);
+            }
         };
 
-        window.flyTo = function(lon, lat) {
-            if (map !== undefined) {
-                map.setView([lat,lon], 6);
-            }
+        window.resetMap = function() {
+            flyTo(20, 40, 2);
         };
 
         window.activateMarker = function(id) {
@@ -56,6 +52,17 @@ function waitAndAddMarker(lon, lat, id, postType){
             marker.addTo(map);
             markers[id] = marker;
             markersIcons[id] = icon;
+        };
+
+        L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVscGVwcGljZWxsaSIsImEiOiJjaWdncnpqOG4wc3IzdzNrbmQzbW40NnRqIn0.608HZWsnmln_Mr6t8JhkEA';
+        var map = L.mapbox.map('map', 'danielpeppicelli.gd5pjb3b', {zoomControl:false});
+        resetMap();
+        var markers = {};
+        var markersIcons = {};
+        var postTypeToIcon = {
+            '': 'fa-pencil',
+            'video': 'fa-video-camera',
+            'gallery': 'fa-camera-retro'
         };
 
         // Disable drag and zoom handlers.
