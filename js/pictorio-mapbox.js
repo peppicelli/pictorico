@@ -54,8 +54,8 @@ function waitAndAddMarker(lon, lat, id, postType){
             markersIcons[id] = icon;
         };
 
-        L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVscGVwcGljZWxsaSIsImEiOiJjaWdncnpqOG4wc3IzdzNrbmQzbW40NnRqIn0.608HZWsnmln_Mr6t8JhkEA';
-        var map = L.mapbox.map('map', 'danielpeppicelli.gd5pjb3b', {zoomControl:false});
+        L.mapbox.accessToken = mapboxAccessToken;
+        var map = L.mapbox.map('map', mapboxMapID, {zoomControl:false});
         resetMap();
         var markers = {};
         var markersIcons = {};

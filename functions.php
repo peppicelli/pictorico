@@ -119,6 +119,19 @@ function pictorico_widgets_init() {
 add_action( 'widgets_init', 'pictorico_widgets_init' );
 
 /**
+ * Theme option to js
+ */
+function pictorio_theme_settings_scripts() {
+	?>
+	<script type="text/javascript">
+		var mapboxMapID = '<?php echo get_theme_mod('mapbox_map_id', 'undefined'); ?>';
+		var mapboxAccessToken = '<?php echo get_theme_mod('mapbox_access_token', 'undefined'); ?>';
+	</script>
+	<?php
+}
+add_action( 'wp_enqueue_scripts', 'pictorio_theme_settings_scripts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function pictorico_scripts() {

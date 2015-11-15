@@ -47,6 +47,27 @@ function pictorico_customize_register( $wp_customize ) {
 		'priority' => 100,
 	) );
 
+	$wp_customize->add_setting( 'mapbox_map_id' , array(
+        'default' => ''
+    ) );
+	$wp_customize->add_control( 'mapbox_map_id', array(
+		'label'    => __( 'Mapbox map ID', 'pictorico' ),
+		'section'  => 'title_tagline',
+        'settings' => 'mapbox_map_id',
+		'type'     => 'text',
+		'priority' => 100,
+	) );
+
+	$wp_customize->add_setting( 'mapbox_access_token' , array(
+        'default' => ''
+    ) );
+	$wp_customize->add_control( 'mapbox_access_token', array(
+		'label'    => __( 'Mapbox access token', 'pictorico' ),
+		'section'  => 'title_tagline',
+        'settings' => 'mapbox_access_token',
+		'type'     => 'text',
+		'priority' => 100,
+	) );
 }
 add_action( 'customize_register', 'pictorico_customize_register' );
 
