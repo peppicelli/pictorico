@@ -216,3 +216,22 @@ function pictorico_get_flickrclick() {
 		return "onclick=\"displayFlickrGallery('".get_post_custom()['flickr gallery id'][0]."','".the_title_attribute(array( 'echo' => false ))."')\"";
 	}
 }
+
+function pictorio_get_header_image() {
+	$default = get_header_image();
+	$headers = get_uploaded_header_images();
+	if (is_404()) {
+		return pictorio_find_special_header($default, $headers, '404');
+	}
+	return $default;
+}
+
+function pictorio_find_special_header($default, $headers, $name) {
+	foreach ( $headers as $header_key => $header ) {
+        $header_alt_text = empty( $header['alt_text'] ) ? $header_desc : $header['alt_text'];
+        if ($header_alt_text == $name) {
+             return $header['url'];
+        }
+    }
+    return $default;
+}

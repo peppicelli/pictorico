@@ -53,14 +53,16 @@
 	</header><!-- #masthead -->
 	<?php if ( is_home() && pictorico_has_featured_posts( 1 ) ) : ?>
 		<?php get_template_part( 'content', 'featured' ); ?>
-	<?php elseif ( get_header_image() && ( is_home() || is_archive() || is_search() ) ) : ?>
+	<?php elseif ( get_header_image()  && ( is_home() || is_archive() || is_search() || is_404() ) ) : ?>
 		<div class="hentry has-thumbnail">
 			<div class="entry-header">
-				<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php header_image(); ?>)">
+				<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 				</div>
 			</div>
-			<div class="entry-map" id="map"></div>
+			<?php if ( is_home() || is_archive() || is_search() ): ?>
+				<div class="entry-map" id="map"></div>
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 	<div class="overlay overlay-hugeinc">

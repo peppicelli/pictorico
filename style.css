@@ -1463,18 +1463,13 @@ a:hover, a:focus, a:active {
 .entry-content {
   margin: 0 auto;
   width: 885px;
-  font-size:85%;
+  font-size:90%;
 }
-@media screen and (max-width: 1180px) {
-  .entry-content {
-    width: 663.75px;
-  }
-}
+
 @media screen and (max-width: 885px) {
   .entry-content {
     font-size: 0.75em;
     line-height: 2em;
-    width: 90%;
   }
 }
 
