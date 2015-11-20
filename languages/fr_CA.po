@@ -17,7 +17,7 @@ msgstr "WordPress.com"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Resultats de recherche pour : %s"
 
 #: inc/template-tags.php:111
 msgid "<span class=\"posted-on\">%1$s</span>"

@@ -223,6 +223,9 @@ function pictorio_get_header_image() {
 	if (is_404()) {
 		return pictorio_find_special_header($default, $headers, '404');
 	}
+	elseif (is_search()) {
+		return pictorio_find_special_header($default, $headers, 'search');
+	}
 	return $default;
 }
 
@@ -235,3 +238,28 @@ function pictorio_find_special_header($default, $headers, $name) {
     }
     return $default;
 }
+
+function pictorio_get_header_with_title($title = '') {
+	$title_html = '';
+	if ($title != '') {
+		$title_html = "<h1 class='entry-title'>".$title."</h1>";
+	}
+
+	if ( is_home() && pictorico_has_featured_posts( 1 ) ) {
+		get_template_part( 'content', 'featured' );
+	}
+	elseif ( get_header_image()  && ( is_home() || is_archive()) || is_404() || is_search()) {
+		?><div class="hentry has-thumbnail">
+				<div class="entry-header">
+					<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
+					</div>
+					<?php echo $title_html; ?>
+				</div>
+				<?php if ( is_home() || is_archive() ): ?>
+					<div class="entry-map" id="map"></div>
+				<?php endif; ?>
+		</div><?php
+	}
+}
+
