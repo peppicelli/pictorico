@@ -1127,7 +1127,7 @@ a:hover, a:focus, a:active {
 .site-branding {
   border-right: 1px solid #cccccc;
   float: left;
-  max-width: 25%;
+  max-width: 35%;
   padding-right: 25px;
 }
 @media screen and (max-width: 885px) {
@@ -1462,8 +1462,13 @@ a:hover, a:focus, a:active {
 
 .entry-content {
   margin: 0 auto;
-  width: 885px;
   font-size:90%;
+}
+
+@media screen and (min-width: 885px) {
+  .entry-content {
+    width: 885px;
+  }
 }
 
 @media screen and (max-width: 885px) {
