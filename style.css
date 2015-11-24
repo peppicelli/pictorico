@@ -1111,29 +1111,25 @@ a:hover, a:focus, a:active {
 
 .site-header-inner {
   margin: 0 auto;
-  max-width: 1180px;
+  width:100%;
+  padding-left:25px;
 }
-@media screen and (max-width: 1180px) {
+@media screen and (min-width: 885px) {
   .site-header-inner {
-    max-width: 885px;
-  }
-}
-@media screen and (max-width: 885px) {
-  .site-header-inner {
-    width: 100%;
+    padding-right:25px;
   }
 }
 
 .site-branding {
   border-right: 1px solid #cccccc;
   float: left;
-  max-width: 35%;
+  max-width: 100%;
   padding-right: 25px;
 }
+
 @media screen and (max-width: 885px) {
   .site-branding {
     border: 0;
-    max-width: 100%;
   }
 }
 
@@ -1189,12 +1185,6 @@ a:hover, a:focus, a:active {
   margin-top: -1px;
   margin-bottom: -4px;
   margin-right: 10px;
-}
-
-@media screen and (max-width: 885px) {
-  .site-title {
-    margin-left: 15px;
-  }
 }
 
 .site-description {
