@@ -2985,3 +2985,7 @@ div.sharedaddy div.sd-block {
     right: 10px;
   }
 }
+
+.lyte-wrapper {
+  width: 100% !important;
+}
