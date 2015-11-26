@@ -5,7 +5,7 @@
  * @package Pictorico
  */
 function get_custom_title() {
-	return _x( 'Oops! That page can&rsquo;t be found.', 'pictorico' );
+	return __( 'Oops! That page can&rsquo;t be found.', 'pictorico' );
 }
 get_header(); ?>
 
