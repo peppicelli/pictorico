@@ -5,6 +5,15 @@
  * @package Pictorico
  */
 
+// See http://wordpress.stackexchange.com/questions/47206/how-can-i-remove-the-site-url-from-enqueued-scripts-and-styles
+// Needed to support multi site.
+add_filter( 'style_loader_src', 'wpse47206_src' );
+function wpse47206_src( $url )
+{
+    if( is_admin() ) return $url;
+    return str_replace( site_url(), '', $url );
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
