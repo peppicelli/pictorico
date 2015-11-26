@@ -62,7 +62,7 @@
 	<div class="overlay overlay-hugeinc">
 		<h1 id="overlay-title">Title</h1>
 		<span class="fa fa-times fa-2x overlay-close"></span>
-		<div class="overlay-container">
-		</div>
+		<div class="overlay-container"></div>
+		<h2 id="overlay-link" class="overlay-link"></h2>
 	</div>
 	<div id="content" class="site-content">

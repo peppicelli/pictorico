@@ -207,13 +207,13 @@ function pictorico_get_marker_add() {
 
 function pictorico_get_videoclick() {
 	if (get_post_format() == "video") {
-		return "onclick=\"displayVideo('".esc_url(pictorico_get_video_url())."','".the_title_attribute(array( 'echo' => false ))."')\"";
+		return "onclick=\"displayVideo('".esc_url(pictorico_get_video_url())."','".the_title_attribute(array( 'echo' => false ))."','".get_permalink()."')\"";
 	}
 }
 
 function pictorico_get_flickrclick() {
 	if (array_key_exists('flickr gallery id', get_post_custom())) {
-		return "onclick=\"displayFlickrGallery('".get_post_custom()['flickr gallery id'][0]."','".the_title_attribute(array( 'echo' => false ))."')\"";
+		return "onclick=\"displayFlickrGallery('".get_post_custom()['flickr gallery id'][0]."','".the_title_attribute(array( 'echo' => false ))."','".get_permalink()."')\"";
 	}
 }
 
