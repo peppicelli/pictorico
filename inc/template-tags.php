@@ -242,7 +242,7 @@ function pictorio_find_special_header($default, $headers, $name) {
 function pictorio_get_header_with_title($title = '') {
 	$title_html = '';
 	if ($title != '') {
-		$title_html = "<h1 class='entry-title'>".$title."</h1>";
+		$title_html = "<h1 class='entry-title'>".remove_accents($title)."</h1>";
 	}
 
 	if ( is_home() && pictorico_has_featured_posts( 1 ) ) {

@@ -23,7 +23,7 @@ if ( has_post_thumbnail() )
 				<div class="header-image" style="background-image: url(<?php header_image(); ?>)"></div>
 			<?php endif; ?>
 		<?php endif; ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title"><?php echo remove_accents(get_the_title()); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
