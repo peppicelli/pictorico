@@ -13,7 +13,7 @@
 .overlay .overlay-close {
     position: absolute;
     right: 25px;
-    top: 20px;
+    top: 25px;
     color: white;
     z-index: 100;
 }
@@ -22,7 +22,7 @@
 .overlay .overlay-link {
     position: absolute;
     left: 25px;
-    bottom: 10px;
+    top: 20px;
     margin: 0;
     color: white;
     z-index: 100;
@@ -45,11 +45,19 @@
     .overlay h1 {
         font-size:40px;
     }
+
+    .overlay-link a {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 590px) {
     .overlay h1 {
         font-size:25px;
+    }
+
+    .overlay-link a {
+        display: none;
     }
 }
 
