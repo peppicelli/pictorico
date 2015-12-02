@@ -252,7 +252,7 @@ function pictorio_get_header_with_title($title = '') {
 		?><div class="hentry has-thumbnail">
 				<?php if ( is_home() || is_archive() ): ?>
 					<div class="entry-header">
-						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.45">
+						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 						</div>
 						<?php echo $title_html; ?>

@@ -1506,7 +1506,7 @@ a:hover, a:focus, a:active {
   font-size: 18px;
   line-height: 140%;
   left: 10px;
-  bottom: 10px;
+  top: 6px;
   width: 56%;
   padding: 15px 15px 15px 15px;
   z-index: 1000;
