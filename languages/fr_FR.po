@@ -287,3 +287,23 @@ msgstr "Apparemment, rien n&rsquo;a été trouvé à cette adresse. Essayez avec
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oups ! Cette page est introuvable."
+
+#. Definition title
+#: inc/template-tags.php
+msgid "Day Off"
+msgstr "Jour férié"
+
+#. Definition
+#: inc/template-tags.php
+msgid "A day of vacation; a day when one does not attend work, school etc"
+msgstr "Jour de fête civile ou religieuse"
+
+#. Definition example
+#: inc/template-tags.php
+msgid "In short, a perfect day to relax, either in the neighbourhoud or on the other side of the planet."
+msgstr "En bref, un jour de congé parfait pour flaner, que ce soit juste à côté de chez soi, ou à l'autre bout du monde!"
+
+#. Definition phonetics
+#: inc/template-tags.php
+msgid "\\deɪ ɔf\\"
+msgstr "\\ʒuʁ fe.ʁje\\"

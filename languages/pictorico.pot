@@ -331,3 +331,23 @@ msgstr ""
 #: wp-content/themes/pub/pictorico/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
+
+#. Definition title
+#: inc/template-tags.php
+msgid "Day Off"
+msgstr ""
+
+#. Definition
+#: inc/template-tags.php
+msgid "A day of vacation; a day when one does not attend work, school etc"
+msgstr ""
+
+#. Definition example
+#: inc/template-tags.php
+msgid "In short, a perfect day to relax, either in the neighbourhoud or on the other side of the planet."
+msgstr ""
+
+#. Definition phonetics
+#: inc/template-tags.php
+msgid "\\deɪ ɔf\\"
+msgstr ""

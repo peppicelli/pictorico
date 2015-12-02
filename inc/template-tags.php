@@ -250,14 +250,28 @@ function pictorio_get_header_with_title($title = '') {
 	}
 	elseif ( get_header_image()  && ( is_home() || is_archive()) || is_404() || is_search()) {
 		?><div class="hentry has-thumbnail">
-				<div class="entry-header">
-					<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
-					</div>
-					<?php echo $title_html; ?>
-				</div>
 				<?php if ( is_home() || is_archive() ): ?>
+					<div class="entry-header">
+						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.45">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
+						</div>
+						<?php echo $title_html; ?>
+					</div>
 					<div class="entry-map" id="map"></div>
+					<div class="entry-text">
+						<p><b><?php echo __( 'Day Off', 'pictorico' ) ?> &nbsp </b> <?php echo __( '\\deɪ ɔf\\', 'pictorico' ) ?></p>
+						<p><?php echo __( 'A day of vacation; a day when one does not attend work, school etc', 'pictorico' ) ?></p>
+						<div class="entry-text-extra">
+							<p><i><?php echo __( 'In short, a perfect day to relax, either in the neighbourhoud or on the other side of the planet.', 'pictorico' ) ?></i></p>
+						</div>
+					</div>
+				<?php else: ?>
+					<div class="entry-header">
+						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
+						</div>
+						<?php echo $title_html; ?>
+					</div>
 				<?php endif; ?>
 		</div><?php
 	}

@@ -1500,6 +1500,38 @@ a:hover, a:focus, a:active {
   background-color:#E7F2F8;
 }
 
+.entry-text {
+  float: left;
+  position: absolute;
+  font-size: 18px;
+  line-height: 140%;
+  left: 10px;
+  bottom: 10px;
+  width: 56%;
+  padding: 15px 15px 15px 15px;
+  z-index: 1000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.entry-text p {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 885px) {
+  .entry-text {
+    width: 100%;
+  }
+
+  .entry-text-extra {
+    display: none;
+  }
+
+  .entry-text p {
+    margin-bottom: 1px;
+  }
+}
+
 @media screen and (max-width: 885px) {
   .entry-map {
     display: none;
