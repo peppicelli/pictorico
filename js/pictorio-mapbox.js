@@ -1,10 +1,10 @@
-function waitAndAddMarker(lon, lat, id, postType){
+function waitAndAddMarker(lon, lat, id, postType, title, url){
     if(typeof window.addMarker !== "undefined"){
-        window.addMarker(lon, lat, id, postType);
+        window.addMarker(lon, lat, id, postType, title, url);
     }
     else{
         setTimeout(function(){
-            waitAndAddMarker(lon, lat, id, postType);
+            waitAndAddMarker(lon, lat, id, postType, title, url);
         },250);
     }
 }
@@ -37,7 +37,7 @@ function waitAndAddMarker(lon, lat, id, postType){
             markers[id].setIcon(markersIcons[id]);
         }
 
-        window.addMarker = function(lon, lat, id, postType) {
+        window.addMarker = function(lon, lat, id, postType, title, url) {
 
             var icon = L.AwesomeMarkers.icon({
                 prefix: 'fa',
@@ -48,6 +48,16 @@ function waitAndAddMarker(lon, lat, id, postType){
             var marker = L.marker([lat,lon],
                 {icon: icon}
             );
+
+            if (postType === 'video') {
+                marker.bindPopup('<b> <a onclick="displayVideo(\''+url+'\',\''+title+'\')">'+title+'</a></b>');
+            }
+            else if (postType === 'gallery') {
+                marker.bindPopup('<b> <a onclick="displayFlickrGallery(\''+url+'\',\''+title+'\')">'+title+'</a></b>');
+            }
+            else {
+                marker.bindPopup('<b> <a href="'+url+'">'+title+'</a></b>');
+            }
 
             marker.addTo(map);
             markers[id] = marker;
@@ -66,13 +76,13 @@ function waitAndAddMarker(lon, lat, id, postType){
         };
 
         // Disable drag and zoom handlers.
-        map.dragging.disable();
-        map.touchZoom.disable();
-        map.doubleClickZoom.disable();
-        map.scrollWheelZoom.disable();
+        //map.dragging.disable();
+        //map.touchZoom.disable();
+        //map.doubleClickZoom.disable();
+        //map.scrollWheelZoom.disable();
 
         // Disable tap handler, if present.
-        if (map.tap) map.tap.disable();
+        //if (map.tap) map.tap.disable();
 
     });
 }(jQuery));

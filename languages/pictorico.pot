@@ -339,15 +339,19 @@ msgstr ""
 
 #. Definition
 #: inc/template-tags.php
-msgid "A day of vacation; a day when one does not attend work, school etc"
+msgid "A day of vacation; a day when one does not attend work"
 msgstr ""
 
 #. Definition example
 #: inc/template-tags.php
-msgid "In short, a perfect day to relax, either in the neighbourhoud or on the other side of the planet."
+msgid "In short, a perfect day to relax, either in the neighborhood or on the other side of the planet."
 msgstr ""
 
 #. Definition phonetics
 #: inc/template-tags.php
 msgid "\\deɪ ɔf\\"
+msgstr ""
+
+#: footer.php
+msgid "Customization available on <a href=\"https://github.com/peppicelli/pictorico\">github</a>"
 msgstr ""

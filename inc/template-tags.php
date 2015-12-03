@@ -198,10 +198,22 @@ function pictorico_get_map_actions() {
 	}
 }
 
+function get_url_from_post_type() {
+	if (get_post_format() == "video") {
+		return esc_url(pictorico_get_video_url());
+	}
+	else if (get_post_format() == "gallery") {
+		return get_post_custom()['flickr gallery id'][0];
+	}
+	else {
+		return get_permalink();
+	}
+}
+
 function pictorico_get_marker_add() {
 	if (array_key_exists('longitude', get_post_custom()) &&
 	    array_key_exists('latitude', get_post_custom())) {
-		return "<script type=\"text/javascript\">waitAndAddMarker(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].",".get_the_ID().",'".get_post_format()."')</script>";
+		return "<script type=\"text/javascript\">waitAndAddMarker(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].",".get_the_ID().",'".get_post_format()."','".the_title_attribute(array( 'echo' => false ))."','".get_url_from_post_type()."')</script>";
 	}
 }
 
@@ -252,7 +264,7 @@ function pictorio_get_header_with_title($title = '') {
 		?><div class="hentry has-thumbnail">
 				<?php if ( is_home() || is_archive() ): ?>
 					<div class="entry-header">
-						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
+						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 						</div>
 						<?php echo $title_html; ?>
@@ -260,14 +272,14 @@ function pictorio_get_header_with_title($title = '') {
 					<div class="entry-map" id="map"></div>
 					<div class="entry-text">
 						<p><b><?php echo __( 'Day Off', 'pictorico' ) ?> &nbsp </b> <?php echo __( '\\deɪ ɔf\\', 'pictorico' ) ?></p>
-						<p><?php echo __( 'A day of vacation; a day when one does not attend work, school etc', 'pictorico' ) ?></p>
+						<p><?php echo __( 'A day of vacation; a day when one does not attend work', 'pictorico' ) ?></p>
 						<div class="entry-text-extra">
-							<p><i><?php echo __( 'In short, a perfect day to relax, either in the neighbourhoud or on the other side of the planet.', 'pictorico' ) ?></i></p>
+							<p><i><?php echo __( 'In short, a perfect day to relax, either in the neighborhood or on the other side of the planet.', 'pictorico' ) ?></i></p>
 						</div>
 					</div>
 				<?php else: ?>
 					<div class="entry-header">
-						<div class="header-image" onmouseenter="resetMap();" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
+						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 						</div>
 						<?php echo $title_html; ?>
