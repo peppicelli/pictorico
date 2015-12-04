@@ -1,10 +1,10 @@
-function waitAndAddMarker(lon, lat, id, postType, title, url){
+function waitAndAddMarker(lon, lat, id, postType, title, url, link, link_title){
     if(typeof window.addMarker !== "undefined"){
-        window.addMarker(lon, lat, id, postType, title, url);
+        window.addMarker(lon, lat, id, postType, title, url, link, link_title);
     }
     else{
         setTimeout(function(){
-            waitAndAddMarker(lon, lat, id, postType, title, url);
+            waitAndAddMarker(lon, lat, id, postType, title, url, link, link_title);
         },250);
     }
 }
@@ -37,7 +37,7 @@ function waitAndAddMarker(lon, lat, id, postType, title, url){
             markers[id].setIcon(markersIcons[id]);
         }
 
-        window.addMarker = function(lon, lat, id, postType, title, url) {
+        window.addMarker = function(lon, lat, id, postType, title, url, link, link_title) {
 
             var icon = L.AwesomeMarkers.icon({
                 prefix: 'fa',
@@ -50,10 +50,10 @@ function waitAndAddMarker(lon, lat, id, postType, title, url){
             );
 
             if (postType === 'video') {
-                marker.bindPopup('<b> <a onclick="displayVideo(\''+url+'\',\''+title+'\')">'+title+'</a></b>');
+                marker.bindPopup('<b> <a onclick="displayVideo(\''+url+'\',\''+title+'\',\''+link+'\',\''+link_title+'\')">'+title+'</a></b>');
             }
             else if (postType === 'gallery') {
-                marker.bindPopup('<b> <a onclick="displayFlickrGallery(\''+url+'\',\''+title+'\')">'+title+'</a></b>');
+                marker.bindPopup('<b> <a onclick="displayFlickrGallery(\''+url+'\',\''+title+'\',\''+link+'\',\''+link_title+'\')">'+title+'</a></b>');
             }
             else {
                 marker.bindPopup('<b> <a href="'+url+'">'+title+'</a></b>');
@@ -74,15 +74,5 @@ function waitAndAddMarker(lon, lat, id, postType, title, url){
             'video': 'fa-video-camera',
             'gallery': 'fa-camera-retro'
         };
-
-        // Disable drag and zoom handlers.
-        //map.dragging.disable();
-        //map.touchZoom.disable();
-        //map.doubleClickZoom.disable();
-        //map.scrollWheelZoom.disable();
-
-        // Disable tap handler, if present.
-        //if (map.tap) map.tap.disable();
-
     });
 }(jQuery));

@@ -213,7 +213,7 @@ function get_url_from_post_type() {
 function pictorico_get_marker_add() {
 	if (array_key_exists('longitude', get_post_custom()) &&
 	    array_key_exists('latitude', get_post_custom())) {
-		return "<script type=\"text/javascript\">waitAndAddMarker(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].",".get_the_ID().",'".get_post_format()."','".the_title_attribute(array( 'echo' => false ))."','".get_url_from_post_type()."')</script>";
+		return "<script type=\"text/javascript\">waitAndAddMarker(".get_post_custom()['longitude'][0].",".get_post_custom()['latitude'][0].",".get_the_ID().",'".get_post_format()."','".the_title_attribute(array( 'echo' => false ))."','".get_url_from_post_type()."','".get_permalink()."','".__( 'Leave a comment', 'pictorico' )."')</script>";
 	}
 }
 
@@ -277,6 +277,10 @@ function pictorio_get_header_with_title($title = '') {
 							<p><i><?php echo __( 'In short, a perfect day to relax, either in the neighborhood or on the other side of the planet.', 'pictorico' ) ?></i></p>
 						</div>
 					</div>
+					<!--<div class="entry-newsletter">
+						<p> Newsletter: <input type="text" value="Your email"><input type="button" value="Subscribe"/>
+					</div>-->
+
 				<?php else: ?>
 					<div class="entry-header">
 						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">

@@ -1500,6 +1500,29 @@ a:hover, a:focus, a:active {
   background-color:#E7F2F8;
 }
 
+.entry-newsletter {
+  float:right;
+  position: absolute; !important;
+  right: 370px;
+  bottom: 10px;
+  z-index:1000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.entry-newsletter input {
+  padding-top:10px;
+  padding-bottom:3px;
+}
+
+.entry-newsletter input[type="button"] {
+  font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .entry-text {
   float: left;
   position: absolute;
@@ -1545,6 +1568,7 @@ a:hover, a:focus, a:active {
 .leaflet-popup-content {
   width:125px !important;
   padding-top: 22px !important;
+  text-align: center;
 }
 
 .leaflet-popup-pane {
