@@ -1542,6 +1542,19 @@ a:hover, a:focus, a:active {
   position: absolute; !important;
 }
 
+.leaflet-popup-content {
+  width:125px !important;
+  padding-top: 22px !important;
+}
+
+.leaflet-popup-pane {
+  font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 885px) {
   .entry-header {
     border-top-width: 30px;
