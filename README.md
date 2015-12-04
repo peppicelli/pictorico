@@ -1,2 +1,3 @@
 # pictorico
-Customisations made on wordpress pictorico theme
+Customisations made on Wordpress Pictorico theme.
+The result can be seen here: http://365joursferies.ch
