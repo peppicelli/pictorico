@@ -6,7 +6,11 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: url(background-map.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Overlay closing cross */
