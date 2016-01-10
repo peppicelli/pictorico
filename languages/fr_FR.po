@@ -308,6 +308,18 @@ msgstr "En bref, un jour de congé parfait pour flaner, que ce soit juste à cô
 msgid "\\deɪ ɔf\\"
 msgstr "\\ʒuʁ fe.ʁje\\"
 
+msgid "A video blog about our journey . . ."
+msgstr "Un blog video pour suivre nos aventures . . ."
+
+msgid ". . . from Turkey to Australia and farther"
+msgstr ". . . de Turquie en Australie et au dela"
+
+msgid "Departure planned in"
+msgstr "Depart prevu dans"
+
+msgid "days"
+msgstr "jours"
+
 #: footer.php
 msgid "Customization available on <a href=\"https://github.com/peppicelli/pictorico\">github</a>"
 msgstr "Le thème modifié est disponible sur <a href=\"https://github.com/peppicelli/pictorico\">github</a>"

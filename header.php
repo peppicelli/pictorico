@@ -24,7 +24,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-inner">
 			<div class="site-branding">
-				<h1 class="site-title"><img class="site-title" src="<?php echo get_bloginfo('template_directory');?>/world.png"/><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><img class="site-title" src="<?php echo get_bloginfo('template_directory');?>/world.gif"/><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 			<nav id="site-navigation" class="main-navigation" role="navigation">

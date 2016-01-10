@@ -544,6 +544,7 @@ body {
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
+  overflow-x: hidden;
 }
 
 button, input[type="submit"] {
@@ -1478,6 +1479,10 @@ a:hover, a:focus, a:active {
   display: inline;
 }
 
+.no-ostrich {
+  font-family: "PT Serif", Georgia, Times, serif;
+}
+
 .entry-header {
   background: #1e1e1e;
   border-bottom: 52.5px solid #323232;
@@ -1524,15 +1529,16 @@ a:hover, a:focus, a:active {
 }
 
 .entry-text {
+  overflow-x: hidden;
   float: left;
   position: absolute;
   font-size: 18px;
   line-height: 140%;
-  left: 10px;
-  top: 6px;
-  width: 56%;
-  padding: 15px 15px 15px 15px;
-  z-index: 1000;
+  left: -500px;
+  top: 0px;
+  width: 70%;
+  padding: 0px 15px 0px 15px;
+  z-index: 999;
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -1543,16 +1549,9 @@ a:hover, a:focus, a:active {
 
 @media screen and (max-width: 885px) {
   .entry-text {
-    width: 100%;
-  }
-
-  .entry-text-extra {
     display: none;
   }
 
-  .entry-text p {
-    margin-bottom: 1px;
-  }
 }
 
 @media screen and (max-width: 885px) {

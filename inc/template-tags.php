@@ -270,13 +270,23 @@ function pictorio_get_header_with_title($title = '') {
 						<?php echo $title_html; ?>
 					</div>
 					<div class="entry-map" id="map"></div>
-					<div class="entry-text">
-						<p><b><?php echo __( 'Day Off', 'pictorico' ) ?> &nbsp </b> <?php echo __( '\\deɪ ɔf\\', 'pictorico' ) ?></p>
-						<p><?php echo __( 'A day of vacation; a day when one does not attend work', 'pictorico' ) ?></p>
-						<div class="entry-text-extra">
-							<p><i><?php echo __( 'In short, a perfect day to relax, either in the neighborhood or on the other side of the planet.', 'pictorico' ) ?></i></p>
-						</div>
+					<script type="text/javascript">
+						var now = new Date();
+						var end = new Date('04/01/2016 10:1 AM');
+						var distance = end - now;
+						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+						var messages = [
+							"<h1><?php echo get_bloginfo( false, 'name' ) ?></h1>",
+							"<h2><?php echo __( 'A video blog about our journey . . .', 'pictorico' ) ?></h2>",
+							"<h2><?php echo __( '. . . from Turkey to Australia and farther', 'pictorico' ) ?></h2>",
+							"<h1><?php echo __( 'Departure planned in', 'pictorico' ) ?> " + days + " <?php echo __( 'days', 'pictorico' ) ?></h1>",
+
+						];
+					</script>
+					<div class="entry-text" id="entry-text"></div>
 					</div>
+
 					<!--<div class="entry-newsletter">
 						<p> Newsletter: <input type="text" value="Your email"><input type="button" value="Subscribe"/>
 					</div>-->
