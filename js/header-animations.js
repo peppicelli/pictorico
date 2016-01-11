@@ -13,7 +13,7 @@
                     left: "easeInOutQuart"
                 },
                 complete: function() {
-                    $('#entry-text').css({'left':'1250px'});
+                    $('#entry-text').css({'left':'1600px'});
                     $('#entry-text').html('<h1>' + messages[currentMessageIndex] + '</h1>');
                     $('#entry-text').animate({
                         left: '15px'
