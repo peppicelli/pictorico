@@ -162,6 +162,7 @@ function pictorico_scripts() {
 	wp_enqueue_style( 'leaflet.awesome-markers', get_template_directory_uri() . '/leaflet.awesome-markers.css', array() );
 	wp_enqueue_style( 'pictorico-open-sans-condensed' );
 	wp_enqueue_style( 'pictorico-pt-serif' );
+	wp_enqueue_style( 'pictorico-robot-slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:300', array() );
 
 	wp_enqueue_script( 'mapbox', 'https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
 	wp_enqueue_script( 'pictorico-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

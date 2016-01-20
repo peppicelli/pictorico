@@ -540,7 +540,7 @@ html {
 body {
   background: #e7f2f8;
   color: #444444;
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
@@ -1480,7 +1480,7 @@ a:hover, a:focus, a:active {
 }
 
 .no-ostrich {
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .entry-header {
@@ -2026,7 +2026,7 @@ a:hover, a:focus, a:active {
 .page-title {
   font-size: 1.85em;
   line-height: 1.62162em;
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: 'Roboto Slab', serif;
   font-style: italic;
   font-weight: normal;
   text-align: center;
@@ -2338,7 +2338,7 @@ object {
 }
 
 .comment-meta {
-  font-family: 'PT Serif', Georgia, Times, serif
+  font-family: 'Roboto Slab', serif;
   line-height: 1;
 }
 .comment-meta a {
