@@ -15,7 +15,7 @@ if ( has_post_thumbnail() )
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
-	<header class="entry-header">
+	<header class="entry-header reduced-title">
 		<?php if ( has_post_thumbnail() || get_header_image() ) : ?>
 			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="entry-thumbnail" style="background-image: url(<?php echo esc_url( $thumbnail[0] ); ?>);"></div>

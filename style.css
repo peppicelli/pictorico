@@ -1675,6 +1675,10 @@ a:hover, a:focus, a:active {
   margin: 0 7.5px;
 }
 
+.has-thumbnail .reduced-title {
+  height: auto !important;
+}
+
 .has-thumbnail .entry-header {
   border: 0;
   height: 350px;
@@ -1686,6 +1690,7 @@ a:hover, a:focus, a:active {
     height: auto;
   }
 }
+
 .has-thumbnail .entry-header .entry-title {
   background: rgba(0, 0, 0, 0.5);
   display: block;
@@ -1700,6 +1705,9 @@ a:hover, a:focus, a:active {
   .has-thumbnail .entry-header .entry-title {
     position: relative;
   }
+}
+.has-thumbnail .reduced-title  .entry-title {
+  position: relative !important;;
 }
 
 .blog .hentry,

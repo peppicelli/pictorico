@@ -147,8 +147,8 @@ function pictorico_scripts() {
 
 	if( !is_admin()){
         wp_deregister_script('jquery');
-        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false, '1.9.1');
-        wp_register_script('jquery-ui', ("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"), false, '1.8.5');
+        wp_register_script('jquery',  get_template_directory_uri() . '/js/jquery.min.js', false, '1.9.1');
+        wp_register_script('jquery-ui',  get_template_directory_uri() . '/js/jquery-ui.min.js', false, '1.8.5');
         wp_enqueue_script('jquery');
         wp_enqueue_script('jquery-ui');
     }

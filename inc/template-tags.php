@@ -182,7 +182,7 @@ function pictorico_get_video_url() {
 		return false;
 	}
 
-	$lytes_regexp="/(?:<p>)?http(v|a):\/\/([a-zA-Z0-9\-\_]+\.|)(youtube|youtu)(\.com|\.be)\/(((watch(\?v\=|\/v\/)|.+?v\=|)([a-zA-Z0-9\-\_]{11}))|(playlist\?list\=([a-zA-Z0-9\-\_]*)))([^\s<]*)(<?:\/p>)?/";
+	$lytes_regexp="/(?:<p>)?http(s|v):\/\/([a-zA-Z0-9\-\_]+\.|)(youtube|youtu)(\.com|\.be)\/(((watch(\?v\=|\/v\/)|.+?v\=|)([a-zA-Z0-9\-\_]{11}))|(playlist\?list\=([a-zA-Z0-9\-\_]*)))([^\s<]*)(<?:\/p>)?/";
 
 	if ( preg_match($lytes_regexp, $content, $matches ) ) {
 		return "https://www.youtube.com/embed/".$matches[9];
@@ -292,7 +292,7 @@ function pictorio_get_header_with_title($title = '') {
 					</div>-->
 
 				<?php else: ?>
-					<div class="entry-header">
+					<div class="entry-header reduced-title">
 						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>)">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 						</div>
