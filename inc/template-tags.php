@@ -182,8 +182,8 @@ function pictorico_get_video_url() {
 		return false;
 	}
 
-	$lytes_regexp="/(?:<p>)?http(s|v):\/\/([a-zA-Z0-9\-\_]+\.|)(youtube|youtu)(\.com|\.be)\/(((watch(\?v\=|\/v\/)|.+?v\=|)([a-zA-Z0-9\-\_]{11}))|(playlist\?list\=([a-zA-Z0-9\-\_]*)))([^\s<]*)(<?:\/p>)?/";
-
+	$lytes_regexp="/http(s|v):\/\/([a-zA-Z0-9\-\_]+\.|)(youtube|youtu)(\.com|\.be)\/embed\/(((watch(\?v\=|\/v\/)|.+?v\=|)([a-zA-Z0-9\-\_]{11}))|(playlist\?list\=([a-zA-Z0-9\-\_]*)))([^\s<]*)/";
+	// https://www.youtube.com/embed/g0H_djP6mvY
 	if ( preg_match($lytes_regexp, $content, $matches ) ) {
 		return "https://www.youtube.com/embed/".$matches[9];
 	}
