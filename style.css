@@ -1466,6 +1466,8 @@ a:hover, a:focus, a:active {
   .entry-content {
     font-size: 0.75em;
     line-height: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
