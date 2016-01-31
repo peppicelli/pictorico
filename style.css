@@ -2224,7 +2224,7 @@ object {
 }
 .site-main .post-navigation .meta-nav:before,
 .site-main .paging-navigation .meta-nav:before {
-  content: "\f430";
+  content: "\f104";
   background: #0691d9;
   display: block;
   font-size: 32px;
@@ -2237,7 +2237,7 @@ object {
 }
 .site-main .post-navigation .nav-next .meta-nav:before,
 .site-main .paging-navigation .nav-next .meta-nav:before {
-  content: "\f429";
+  content: "\f105";
   left: auto;
   right: 0;
 }
