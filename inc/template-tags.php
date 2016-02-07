@@ -285,11 +285,15 @@ function pictorio_get_header_with_title($title = '') {
 						];
 					</script>
 					<div class="entry-text" id="entry-text"></div>
+						<div class="entry-newsletter">
+							<form action="<?php echo get_theme_mod('mailchimp_subscribe_url', ''); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<input type="email" placeholder="<?php echo __( 'Get regular news by email', 'pictorico' ) ?>" value="" name="EMAIL" class="required email" id="mce-EMAIL" size="25">
+								<input type="submit" value="<?php echo __( 'Subscribe', 'pictorico' ) ?>" name="subscribe" id="mc-embedded-subscribe" class="button">
+							</form>
+						</div>
 					</div>
 
-					<!--<div class="entry-newsletter">
-						<p> Newsletter: <input type="text" value="Your email"><input type="button" value="Subscribe"/>
-					</div>-->
+
 
 				<?php else: ?>
 					<div class="entry-header reduced-title">

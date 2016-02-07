@@ -320,6 +320,12 @@ msgstr "Depart prevu dans"
 msgid "days"
 msgstr "jours"
 
+msgid "Get regular news by email"
+msgstr "Nos nouvelles par email"
+
+msgid "Subscribe"
+msgstr "Abonnez vous"
+
 #: footer.php
 msgid "Customization available on <a href=\"https://github.com/peppicelli/pictorico\">github</a>"
 msgstr "Le thème modifié est disponible sur <a href=\"https://github.com/peppicelli/pictorico\">github</a>"

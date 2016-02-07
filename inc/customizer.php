@@ -68,6 +68,17 @@ function pictorico_customize_register( $wp_customize ) {
 		'type'     => 'text',
 		'priority' => 100,
 	) );
+
+	$wp_customize->add_setting( 'mailchimp_subscribe_url' , array(
+		'default' => ''
+	) );
+	$wp_customize->add_control( 'mailchimp_subscribe_url', array(
+		'label'    => __( 'Mailchimp subscribe URL', 'pictorico' ),
+		'section'  => 'title_tagline',
+		'settings' => 'mailchimp_subscribe_url',
+		'type'     => 'text',
+		'priority' => 100,
+	) );
 }
 add_action( 'customize_register', 'pictorico_customize_register' );
 

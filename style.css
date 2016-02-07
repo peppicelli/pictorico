@@ -1511,18 +1511,20 @@ a:hover, a:focus, a:active {
   float:right;
   position: absolute; !important;
   right: 370px;
-  bottom: 10px;
+  bottom: 15px;
   z-index:1000;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
-.entry-newsletter input {
+.entry-newsletter input[type="email"] {
   padding-top:10px;
-  padding-bottom:3px;
+  padding-bottom:8px;
 }
 
-.entry-newsletter input[type="button"] {
+.entry-newsletter input[type="submit"] {
+  padding-top:16px;
+  padding-bottom:6px;
   font-family: "Ostrich Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-size: 22px;
@@ -1558,6 +1560,9 @@ a:hover, a:focus, a:active {
 
 @media screen and (max-width: 885px) {
   .entry-map {
+    display: none;
+  }
+  .entry-newsletter {
     display: none;
   }
 }
