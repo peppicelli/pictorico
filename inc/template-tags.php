@@ -265,8 +265,15 @@ function pictorio_get_header_with_title($title = '') {
 				<?php if ( is_home() || is_archive() ): ?>
 					<div class="entry-header">
 						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
-						</div>
+                        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
+                        </div>
+						<video class="header-video" autoplay loop>
+							<source src="<?php echo get_bloginfo('template_directory');?>/intro.mp4" type="video/mp4">
+							<source src="<?php echo get_bloginfo('template_directory');?>/intro.webm" type="video/webm">
+							<div class="header-image-fallback" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
+							</div>
+						</video>
 						<?php echo $title_html; ?>
 					</div>
 					<div class="entry-map" id="map"></div>
@@ -277,11 +284,10 @@ function pictorio_get_header_with_title($title = '') {
 						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
 						var messages = [
-							"<h1><?php echo get_bloginfo( false, 'name' ) ?></h1>",
-							"<h2><?php echo __( 'A video blog about our journey . . .', 'pictorico' ) ?></h2>",
-							"<h2><?php echo __( '. . . from Turkey to Australia and farther', 'pictorico' ) ?></h2>",
-							"<h1><?php echo __( 'Departure planned in', 'pictorico' ) ?> " + days + " <?php echo __( 'days', 'pictorico' ) ?></h1>",
-
+							"<h1 style=\"font-weight:bold;\"><?php echo get_bloginfo( false, 'name' ) ?></h1>",
+							"<h1 style=\"font-weight:bold;\"><?php echo __( 'A video blog about our journey . . .', 'pictorico' ) ?></h1>",
+							"<h2 style=\"font-weight:bold;\"><?php echo __( '. . . from Turkey to Australia and farther', 'pictorico' ) ?></h2>",
+							"<h1 style=\"font-weight:bold;\"><?php echo __( 'Departure planned in', 'pictorico' ) ?> " + days + " <?php echo __( 'days', 'pictorico' ) ?></h1>",
 						];
 					</script>
 					<div class="entry-text" id="entry-text"></div>

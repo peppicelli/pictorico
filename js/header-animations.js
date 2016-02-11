@@ -18,14 +18,14 @@
                     $('#entry-text').animate({
                         left: '15px'
                     }, {
-                        duration: 1000,
+                        duration: 500,
                         queue: true,
                         specialEasing: {
                             left: "easeInOutQuart"
                         },
                         complete: function() {
                             currentMessageIndex = (currentMessageIndex + 1) % messages.length
-                            setTimeout(function() {animateMessages(messages, currentMessageIndex)},2000);
+                            setTimeout(function() {animateMessages(messages, currentMessageIndex)},2500);
                         }
                     });
                 }
