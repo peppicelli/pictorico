@@ -1177,7 +1177,7 @@ a:hover, a:focus, a:active {
   line-height: 1.62162em;
   line-height: 1.07027em;
   margin-top: 8px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -1222,6 +1222,12 @@ a:hover, a:focus, a:active {
   }
 }
 
+@media screen and (max-width: 590px) {
+  .social-media {
+    display: none;
+  }
+}
+
 .social-media a > i {
   padding-left: 5px;
   padding-right: 5px;
@@ -1238,13 +1244,19 @@ a:hover, a:focus, a:active {
   float:right;
   padding-left:5px;
   padding-right:5px;
-  padding-top:8px;
-  padding-bottom:12px;
+  padding-top:10px;
+  padding-bottom:10px;
   line-height: 30px;
   font-family: 'Ostrich Sans', Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: bold;
+}
+
+@media screen and (max-width: 590px) {
+  .languages {
+    margin-right: 50px;
+  }
 }
 
 .languages a {
