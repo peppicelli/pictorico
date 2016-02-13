@@ -1627,9 +1627,8 @@ a:hover, a:focus, a:active {
 
 .header-video {
   visibility: visible;
-  width: 80%;
-  width: calc(100% - 350px);
-  height: auto;
+  width: auto;
+  height: 350px;
   z-index: -1000;
   overflow: hidden;
 }
