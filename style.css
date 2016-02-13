@@ -1621,10 +1621,6 @@ a:hover, a:focus, a:active {
   z-index: 0;
 }
 
-.header-image {
-  visibility: hidden;
-}
-
 .header-video {
   visibility: visible;
   width: auto;

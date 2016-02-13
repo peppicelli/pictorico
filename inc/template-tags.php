@@ -264,9 +264,6 @@ function pictorio_get_header_with_title($title = '') {
 		?><div class="hentry has-thumbnail">
 				<?php if ( is_home() || is_archive() ): ?>
 					<div class="entry-header">
-						<div class="header-image" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
-                        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
-                        </div>
 						<video class="header-video" autoplay loop>
 							<source src="<?php echo get_bloginfo('template_directory');?>/intro2.mp4" type="video/mp4">
 							<source src="<?php echo get_bloginfo('template_directory');?>/intro2.webm" type="video/webm">
