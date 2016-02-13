@@ -1633,6 +1633,13 @@ a:hover, a:focus, a:active {
   overflow: hidden;
 }
 
+@media screen and (min-width: 1590px) {
+  .header-video {
+    width: calc(100% - 350px);
+    height: auto;
+  }
+}
+
 .entry-footer {
   font-size: 0.75em;
   line-height: 2em;

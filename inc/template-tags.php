@@ -268,8 +268,8 @@ function pictorio_get_header_with_title($title = '') {
                         	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
                         </div>
 						<video class="header-video" autoplay loop>
-							<source src="<?php echo get_bloginfo('template_directory');?>/intro.mp4" type="video/mp4">
-							<source src="<?php echo get_bloginfo('template_directory');?>/intro.webm" type="video/webm">
+							<source src="<?php echo get_bloginfo('template_directory');?>/intro2.mp4" type="video/mp4">
+							<source src="<?php echo get_bloginfo('template_directory');?>/intro2.webm" type="video/webm">
 							<div class="header-image-fallback" style="background-image: url(<?php echo pictorio_get_header_image(); ?>); opacity:0.9">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a>
 							</div>
