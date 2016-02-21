@@ -5,10 +5,10 @@
 
 $format = get_post_format();
 $formats = get_theme_support( 'post-formats' );
-$postclass = '';
+$postclass = 'animate zoomIn';
 
 if ( ! has_post_thumbnail() )
-	$postclass = 'no-thumbnail';
+	$postclass .= ' no-thumbnail';
 ?>
  <?php echo pictorico_get_marker_add(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?> <?php echo pictorico_get_map_actions(); ?>>
