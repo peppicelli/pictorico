@@ -317,6 +317,9 @@ msgstr ". . . de Turquie en Australie et au dela"
 msgid "Departure planned in"
 msgstr "Depart prevu dans"
 
+msgid "On the road since"
+msgstr "Sur la route depuis"
+
 msgid "days"
 msgstr "jours"
 

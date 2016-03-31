@@ -279,15 +279,15 @@ function pictorio_get_header_with_title($title = '') {
 					<div class="entry-map" id="map"></div>
 					<script type="text/javascript">
 						var now = new Date();
-						var end = new Date('04/01/2016 10:1 AM');
-						var distance = end - now;
+						var start = new Date('03/30/2016 10:1 AM');
+						var distance = now - start;
 						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
 						var messages = [
 							"<h1 style=\"font-weight:bold;\"><?php echo get_bloginfo( false, 'name' ) ?></h1>",
 							"<h1 style=\"font-weight:bold;\"><?php echo __( 'A video blog about our journey . . .', 'pictorico' ) ?></h1>",
 							"<h2 style=\"font-weight:bold;\"><?php echo __( '. . . from Turkey to Australia and farther', 'pictorico' ) ?></h2>",
-							"<h1 style=\"font-weight:bold;\"><?php echo __( 'Departure planned in', 'pictorico' ) ?> " + days + " <?php echo __( 'days', 'pictorico' ) ?></h1>",
+							"<h1 style=\"font-weight:bold;\"><?php echo __( 'On the road since', 'pictorico' ) ?> " + days + " <?php echo __( 'days', 'pictorico' ) ?></h1>",
 						];
 					</script>
 					<div class="entry-text" id="entry-text"></div>
@@ -309,4 +309,3 @@ function pictorio_get_header_with_title($title = '') {
 		</div><?php
 	}
 }
-
