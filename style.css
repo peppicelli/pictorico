@@ -113,6 +113,13 @@ a:active {
   outline: 0;
 }
 
+article a img {
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #00354f;
+}
+
 a img {
   border: 0;
 }
@@ -158,7 +165,7 @@ hr {
 
 /* Text elements */
 p {
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 ul, ol {
@@ -188,7 +195,7 @@ dd {
 }
 
 b, strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 dfn, cite, em, i {
@@ -678,7 +685,7 @@ h2 {
   font-size: 37px;
   line-height: 1.22;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -687,7 +694,7 @@ h3 {
   font-size: 25px;
   line-height: 1.2;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -696,7 +703,7 @@ h4 {
   font-size: 20px;
   line-height: 1.5;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -705,7 +712,7 @@ h5 {
   font-size: 20px;
   line-height: 1.5;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -714,7 +721,7 @@ h6 {
   font-size: 15px;
   line-height: 2;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -735,7 +742,7 @@ hr {
 
 /* Text elements */
 p {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -775,7 +782,7 @@ dd {
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dfn, cite, em, i {
@@ -2179,7 +2186,7 @@ a:hover, a:focus, a:active {
 }
 
 .wp-caption {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
@@ -2192,7 +2199,7 @@ a:hover, a:focus, a:active {
   color: #444444;
   font-size: 0.75em;
   line-height: 2em;
-  margin: 15px 0;
+  margin: 2px 0 10px 0;
   padding: 0 1%;
 }
 
