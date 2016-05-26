@@ -113,13 +113,6 @@ a:active {
   outline: 0;
 }
 
-article a img {
-    border-radius: 5px 5px 5px 5px;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border: 1px solid #00354f;
-}
-
 a img {
   border: 0;
 }
@@ -2193,6 +2186,10 @@ a:hover, a:focus, a:active {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 2px solid #00354f;
 }
 
 .wp-caption-text {
