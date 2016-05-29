@@ -156,6 +156,7 @@ function pictorico_scripts() {
 	wp_enqueue_style( 'mapbox', 'https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' );
 	wp_enqueue_style( 'pictorico-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
+    wp_enqueue_style( 'flags', get_template_directory_uri() . '/flags/css/flag-icon.min.css', array() );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.css', array(), '4.4.0' );
 	wp_enqueue_style( 'ostrich-sans', get_template_directory_uri() . '/ostrich-sans/ostrich-sans.css', array(), '1.0' );
 	wp_enqueue_style( 'overlay', get_template_directory_uri() . '/overlay.css', array() );

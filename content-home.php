@@ -26,21 +26,29 @@ if ( ! has_post_thumbnail() )
 		</div><!-- .entry-meta -->
 		<a class="entry-format" title="<?php echo the_title_attribute(); ?>"><span class="screen-reader-text"><?php echo get_post_format_string( $format ); ?></span></a>
 		<?php endif; ?>
-		
+
 		<?php 	// Remove the widont filter because of the limited space for entry titles.
 			$restore_widont = remove_filter( 'the_title', 'widont' );
 		?>
-				
+
+		<?php   // Get the country code if any.
+			$country_flag_html = "";
+			if (array_key_exists('country', get_post_custom())) {
+				$country_flag_html = '<span class="flag-icon flag-icon-'.get_post_custom()['country'][0].'"></span>';
+			}
+
+		 ?>
+
 		<?php if ( 'link' == $format ) : ?>
-			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( pictorico_get_link_url() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( pictorico_get_link_url() ) . '" rel="bookmark">', $country_flag_html.'</a></h1>' ); ?>
 		<?php else : ?>
-			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', $country_flag_html.'</a></h1>' ); ?>
 		<?php endif; ?>
-		
+
 		<?php 	// If the widont filter is successfully removed add it back for the rest of the blog.
 				if ( $restore_widont ) {
 					add_filter( 'the_title', 'widont' );
-				} 
+				}
 		?>
 	</header><!-- .entry-header -->
 

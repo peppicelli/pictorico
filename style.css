@@ -1566,6 +1566,11 @@ a:hover, a:focus, a:active {
   font-family: 'Roboto Slab', serif;
 }
 
+.flag-icon {
+    bottom: 2px;
+    margin-left:10px;
+}
+
 .entry-header {
   background: #1e1e1e;
   border-bottom: 52.5px solid #323232;
