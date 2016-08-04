@@ -64,9 +64,12 @@ function waitAndAddMarker(lon, lat, id, postType, title, url, link, link_title){
             markersIcons[id] = icon;
         };
 
-        L.mapbox.accessToken = mapboxAccessToken;
-        var map = L.mapbox.map('map', mapboxMapID, {zoomControl:false});
-        resetMap();
+        if ($('#map').length){
+            L.mapbox.accessToken = mapboxAccessToken;
+            var map = L.mapbox.map('map', mapboxMapID, {zoomControl:false});
+            resetMap();
+        }
+
         var markers = {};
         var markersIcons = {};
         var postTypeToIcon = {
