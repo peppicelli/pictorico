@@ -32,6 +32,8 @@
             });
 
         }
-        animateMessages(messages, currentMessageIndex);
+        if ($('#entry-text').length){
+            animateMessages(messages, currentMessageIndex);
+        }
     });
 }(jQuery));
